@@ -58,24 +58,26 @@
   <body style="margin: 25px 75px 25px 75px;">
 	<div class="container-fluid">
 	<div class="p-5 text-center bg-light">
-		<h1 class="mb-3">Pandas operations Demo using PyScript</h1>
+		<h1 class="mb-3">OpenPIV Demo using PyScript</h1>
 		<p>Demo developed by <a href="https://www.linkedin.com/in/tirthajyoti-sarkar-2127aa7/">Dr. Tirthajyoti sarkar</a></p>
 		<a class="btn btn-primary" href="https://www.anaconda.com/blog/pyscript-python-in-the-browser" role="button">Check out the announcement from Anaconda about PyScript framework</a>
 	  </div>
 	  <br>
-<div class="alert alert-primary" role="alert">
+<!-- <div class="alert alert-primary" role="alert">
 	<h3><a href="https://github.com/pyscript/pyscript">PyScript</a> is awesome, it just takes a few seconds to load...</h3>
 	<p>To provide the power of Python on your browser, this technology needs to load <b>a special virtual machine and all necessary Python modules</b></p>
 	<p>So, sit back and relax. We are loading the modules and generating some random variables as a test. 
 		You can start interacting with the page when you see a histogram of those random variates displayed below.</p>
 	<p> We promise that, once loaded, your interactions will be <b>Python-powered and fast! </b>You can also read more about this awesome framework here at Anaconda's engineering blog.</p>
 	<a class="btn btn-primary" href="https://engineering.anaconda.com/2022/04/welcome-pyscript.html" role="button">Anaconda Engineering Blog about PyScript</a>
-  </div>
-	<h2 style="border:5px; border-radius: 10px; padding:10px;background-color:gray; color:cyan">Test: Random integers</h2>
-<div class="container-md" id="test-plot">
+  </div> -->
+<!-- 	<h2 style="border:5px; border-radius: 10px; padding:10px;background-color:gray; color:cyan">Test: Random integers</h2>
+
 	<div class="pulse" >
 		<p style='font-family: monospace sans-serif;'><big><big><big><big>PyScript loading and initializing...</big></big></big></big></p>
-	  </div>
+      </div> -->
+		
+<div class="container-md" id="test-plot">
 <py-script>
 import matplotlib.pyplot as plt
 import numpy as np
@@ -89,7 +91,7 @@ pyscript.write('test-plot',fig1)
 <br>
 <h2 style="border:5px; border-radius: 10px; padding:10px;background-color:gray; color:cyan">Pandas - random dataframe</h2>
 Let's generate a Pandas DataFrame with some random nunbers (drawn from the ubiquitous Gaussian Normal distribution).
-<div class="alert alert-info" role="alert">
+<!-- <div class="alert alert-info" role="alert">
 	<img src="info-circle.svg" width="25px">
 The pretty formatting of the table is done, of course, using CSS. Check the <code>style</code> section. The Pandas <code>pd.to_html()</code>
 function has a <code>classes</code> argument that accepts a CSS class or a list of classes. We utilize that formatting this table.</div>
@@ -117,7 +119,7 @@ Now, we will download a CSV file from an externally hosted URL (a GitHub repo) a
 	<div><button id="download-analyze" style="margin-top: 10px;margin-bottom: 10px;" type="button" class="btn btn-primary" 
 		pys-onClick="download_analyze">
 		Download and analyze</div>
-</div>
+</div> -->
 <br>
 <h4>First 5 records of the downloaded file</h4>
 <div id="url-file-head"></div>
