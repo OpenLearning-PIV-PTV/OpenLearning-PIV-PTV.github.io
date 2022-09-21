@@ -10,6 +10,7 @@
       - numpy 
       - openpiv
       - pillow
+      - urllib
     </py-env>
     </head>
     <body>
@@ -20,6 +21,7 @@ import matplotlib.tri as tri
 import numpy as np
 from openpiv.piv import simple_piv
 from PIL import Image
+import urllib
         
 a = np.array(Image.open(urllib.request.urlopen('https://github.com/OpenPIV/openpiv-python-example/blob/master/exp1_001_b.bmp')))
 b = np.array(Image.open(urllib.request.urlopen('https://github.com/OpenPIV/openpiv-python-example/blob/master/exp1_001_c.bmp')))
