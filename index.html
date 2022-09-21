@@ -16,61 +16,15 @@
 - scipy
 - openpiv
 	</py-env>
-	<style>
-		.pd-table {
-		  font-family: Arial, Helvetica, sans-serif;
-		  border-collapse: collapse;
-		  width: 75%;
-		}
-		
-		.pd-table td, .pd-table th {
-		  border: 1px solid #ddd;
-		  padding: 4px;
-		}
-		
-		.pd-table tr:nth-child(even){background-color: #f2f2f2;}
-		
-		.pd-table tr:hover {background-color: #ddd;}
-		
-		.pd-table th {
-		  padding-top: 6px;
-		  padding-bottom: 6px;
-		  text-align: left;
-		  background-color: #04AA6D;
-		  color: white;
-		}
-
-		.pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 1;
-          }
-          20% {
-            opacity: .2;
-          }
-        }
-		</style>
   </head>
 
   <body style="margin: 25px 75px 25px 75px;">
 	<div class="container-fluid">
 	<div class="p-5 text-center bg-light">
 		<h1 class="mb-3">OpenPIV Demo using PyScript</h1>
-		<p>Demo developed by <a href="https://www.linkedin.com/in/tirthajyoti-sarkar-2127aa7/">Dr. Tirthajyoti sarkar</a></p>
-		<a class="btn btn-primary" href="https://www.anaconda.com/blog/pyscript-python-in-the-browser" role="button">Check out the announcement from Anaconda about PyScript framework</a>
 	  </div>
 	  <br>
-<!-- <div class="alert alert-primary" role="alert">
-	<h3><a href="https://github.com/pyscript/pyscript">PyScript</a> is awesome, it just takes a few seconds to load...</h3>
-	<p>To provide the power of Python on your browser, this technology needs to load <b>a special virtual machine and all necessary Python modules</b></p>
-	<p>So, sit back and relax. We are loading the modules and generating some random variables as a test. 
-		You can start interacting with the page when you see a histogram of those random variates displayed below.</p>
-	<p> We promise that, once loaded, your interactions will be <b>Python-powered and fast! </b>You can also read more about this awesome framework here at Anaconda's engineering blog.</p>
-	<a class="btn btn-primary" href="https://engineering.anaconda.com/2022/04/welcome-pyscript.html" role="button">Anaconda Engineering Blog about PyScript</a>
-  </div> -->
+
 <!-- 	<h2 style="border:5px; border-radius: 10px; padding:10px;background-color:gray; color:cyan">Test: Random integers</h2>
 
 	<div class="pulse" >
@@ -109,24 +63,22 @@ So, we use the <code>document.getElementbyId()</code> function to accomplish thi
 <div><button id="table_stats" style="margin-top: 10px;margin-bottom: 10px;" type="button" class="btn btn-primary" pys-onClick="show_stats">
 	Show DataFrame stats</div>
 <br>
-<div id="pandas-ops"></div>
-<br>
-<h2 style="border:5px; border-radius: 10px; padding:10px;background-color:gray; color:cyan">Download file and analyze</h2>
-Now, we will download a CSV file from an externally hosted URL (a GitHub repo) and show its contents and statistics.
-<div style="margin-top: 10px;margin-bottom: 10px;">
-	<input type="url" id="file-url" style="width: 50%" 
-	placeholder="https://raw.githubusercontent.com/tirthajyoti/Machine-Learning-with-Python/master/Datasets/Mall_Customers.csv">
-	<div><button id="download-analyze" style="margin-top: 10px;margin-bottom: 10px;" type="button" class="btn btn-primary" 
-		pys-onClick="download_analyze">
-		Download and analyze</div>
-</div> -->
-<br>
-<h4>First 5 records of the downloaded file</h4>
-<div id="url-file-head"></div>
-<br>
-<h4>Statistics of the downloaded file</h4>
-<div id="url-file-ops"></div>
-<br>
+
+
+<h1>Let's plot random numbers</h1>
+    <div id="plot"></div>
+    <py-script output="plot">
+      import matplotlib.pyplot as plt
+      import numpy as np
+
+      x = np.random.randn(1000)
+      y = np.random.randn(1000)
+
+      fig, ax = plt.subplots()
+      ax.scatter(x, y)
+      fig
+    </py-script>
+	
 <py-script>
 import pandas as pd, numpy as np
 from js import document
